@@ -2,6 +2,9 @@
 <html>
 <head>
 <title>Home</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
 <style>
 body {
 	background-color:#200025;
@@ -15,27 +18,88 @@ p {
 	
 }
 
-.top-bar {
+nav {
 	color:#301030;
-	a:link {color:#00bbff;}
-	a:visited {color:#ee22cc}
-	a:hover {color:#aad0ff;}
-	margin:15px;
+
+	margin-right:40px;
+	float:right;
 	
 }
+
+/*header*/
+header {
+	color:#0000ff
+}
+
+header li {
+	display:inline;
+	margin-left:20px;
+	margin-right:20px;
+}
+
+header a {color:#00bbff;}
+header a:hover {color:#aad0ff;}
+header a {text-decoration:none;}
+
+/*photo showcase*/
+.photo-showcase {
+    float:center;
+    width:80%;
+}
+
+.photo-showcase h2 {
+	color:#98FB98;
+	margin-left:20%;
+}
+
+.photo-showcase h3 {
+    float:right;
+    margin-right:20px;
+}
+.photo-showcase ul {
+	list-style:none;
+}
+
+.photo-showcase li {
+    float:right;
+    margin-right:20px;
+	color:#98FB98;
+}
+
+.photo-showcase img {
+	max-height:800px;
+	margin-left:25%;
+	margin-right:25%;
+}
+  
+
 </style>
 </head>
 <body>
 
-<h3>Welcome to my lair!</h3>
-
-<div class="top-bar">
+<header>
+<nav>
 <!--Top bar with links to various pages-->
-	<a href="index.html">HOME</a>
-	<a href="gallery.html">GALLERY</a>
-	<a href="projects.html">PROJECTS</a>
-	<a href="about.html">ABOUT</a>
+	<ul class="top-bar>
+		<li><a href="index.html">HOME</a></li>
+		<li><a href="gallery.html">GALLERY</a></li>
+		<li><a href="projects.html">PROJECTS</a></li>
+		<li><a href="about.html">ABOUT</a></li>
+	</ul>
 </div>
+</header>
+
+<div class="photo-showcase">
+    <h2>Photo of the Day</h2>
+    <h3>About this Photo</h3>
+    <ul>
+        <li>Date taken:</li>
+        <li>Models Featured:</li>
+        <li>Caption:</li>
+	</ul>
+	<img src=".\img\todays-pic-showcase.png">
+</div>
+
 
 <div class=article-blurb>
 <!--Top bar with links to various pages-->
