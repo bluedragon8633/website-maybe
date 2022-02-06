@@ -11,6 +11,11 @@ p {
 	
 }
 
+.container{
+	margin:auto;
+	overflow:hidden;
+}
+
 nav {
 	color:#301030;
 
@@ -49,10 +54,11 @@ header .current a{
 .photo-showcase h2 {
 	color:#98FB98;
 	margin-left:20%;
+
 }
 
 .photo-showcase h3 {
-	float:right;
+	margin-left:68%;
     margin-right:20px;
 }
 .photo-showcase ul {
@@ -70,6 +76,10 @@ header .current a{
 .photo-showcase img {
 	max-height:600px;
 	float:left;
+}
+.photo-info {
+	text-align:left;
+	float:right;
 }
 
 li#fanfic-box {
