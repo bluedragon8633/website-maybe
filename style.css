@@ -2,13 +2,8 @@ body {
 	background-color:#200025;
 	font-family: Helvetica, sans-serif;
 }
-h3,h2,h1 {
+h3,h2,h1,p,li {
 	color:#98FB98;
-}
-
-p {
-	color:#98FB98;
-	
 }
 
 .container{
@@ -43,7 +38,36 @@ header .current a{
 	color:#008cbf;
 }
 
-/*photo showcase*/
+/*New photo showcase*/
+aside#sidebar{
+	float:right;
+	width:30%;
+}
+
+aside#sidebar ul {
+	list-style:none;
+	margin-left:-100px;
+}
+
+aside#sidebar h3 {
+	margin-left:-60px;
+}
+
+.photo-showcase {
+	margin-left:30%;
+	margin-right:30%;
+}
+
+article img {
+	margin-left:10px;
+	margin-top:10px;
+	max-height:600px;
+	float:left;
+}
+
+
+
+/*photo showcase- old code
 .photo-showcase {
     margin-left:30%;
 	margin-right:30%;
@@ -81,6 +105,8 @@ header .current a{
 	text-align:left;
 	float:right;
 }
+*/
+
 
 li#fanfic-box {
 	border: #98fb98 solid 1px;
