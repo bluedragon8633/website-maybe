@@ -25,7 +25,7 @@
         function getGexQuote() {
             let startingID = Math.floor(Math.random()*beginnings.length);
             if (startingID == 0 || startingID == 1) {
-                document.getElementById("quote").innerHTML = beginnings[startingID].concat(verbs[Math.floor(Math.random()*verbs.length)]+"at "+people[Math.floor(Math.random()*people.length)]+"'s "+houses[Math.floor(Math.random()*houses.length)]+"!");
+                document.getElementById("quote").innerHTML = beginnings[startingID].concat(verbs[Math.floor(Math.random()*verbs.length)]+" at "+people[Math.floor(Math.random()*people.length)]+"'s "+houses[Math.floor(Math.random()*houses.length)]+"!");
             } else if (startingID == 2) {
                 document.getElementById("quote").innerHTML = beginnings[startingID].concat(feelings[Math.floor(Math.random()*feelings.length)]+" since "+verbs[Math.floor(Math.random()*verbs.length)]+" at "+people[Math.floor(Math.random()*people.length)]+"'s "+houses[Math.floor(Math.random()*houses.length)]+"!");
             }
