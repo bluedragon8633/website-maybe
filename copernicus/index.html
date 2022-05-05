@@ -5,6 +5,10 @@
     <style>
 		body {
 			background-color: #00ff00;
+			color: #ff0;
+			width:100%;
+			height:100%;
+			animation: blinkingBackground 2s infinite;
 		}
         .Center {
             padding-top:20px;
@@ -38,18 +42,21 @@
 		li {
 			list-style:none;
 		}
-		body{
-			color: #ff0;
-			width:100%;
-			height:100%;
-			animation: blinkingBackground 2s infinite;
+		#CyanPurple {
+			animation: blinkingBackground2 2s infinite;
 		}
 		@keyframes blinkingBackground{
 			0%		{ background-color: #00ff00;}
-			50%	    { background-color: #ffff00;}
+			33%	    { background-color: #ffff00;}
+			66%	    { background-color: #7e7e00;}
 			100%    { background-color: #00ff00;}
 		}
-		
+		@keyframes blinkingBackground2{
+			0%		{ background-color: #00ffff;}
+			50%	    { background-color: #ff00ff;}
+			100%    { background-color: #00ffff;}
+		}
+		<!--
 		@keyframes rotate
 		{
 			0%   { transform: rotate(0); }
@@ -58,15 +65,13 @@
 			75%  { transform: rotate(270); }
 			100% { transform: rotate(360); }
 		}
+		-->
 		
-		#spin
-		{
-			animation-name: rotate;
-			animation-duration: 4s;
-			animation-iteration-count: infinite;
-			animation-play-state: running;
-		}
+		img {
+			width:9.7%;
+			height:10%;
 
+		}
     </style>
 </head>
 
@@ -84,7 +89,7 @@
         </div>
         
     </div>
-    <div class="Center UpsideDown">
+    <div class="Center UpsideDown" id="CyanPurple">
         <h1>Learn About Copernicus!</h1>
         <p class="Footnote">Made by bluedragon8633</p>
         
@@ -95,45 +100,67 @@
         </div>
         
     </div>
-	<!--
-	<div class="Center">
-		<button onclick="rotate("rotating_div")">Spin!</button>
+	<div> 
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg">
 	</div>
-    <div class="Center" id="spin">
-        <h1>Learn About Copernicus!</h1>
-        <p class="Footnote">Made by bluedragon8633</p>
-        
-        <div class="Section">
-            <h2>Do YOU want to learn all the intimate details about a dead person?</h2>
-            <p>Your one-stop shop to post-mortem stalking!</p>
-            <p><a href="./GexQuoteGenerator - Release.zip">Windows build (x64)</a></p>
-        </div>
-        
-    </div>
-	</div>
-	
-	<script>
-	var degrees = 0;
-	var returnThis = "";
-	var times = 0;
-	function spin() {
-	while(times < 5;) {
-		
-		if (degrees==359) {
-			degrees = 0;
-			times++;
-		} else {
-			degrees++;
-		}
-		returnThis = degrees.concat("deg");
-		document.getElementById("spin").style.rotate = degrees;
-	}
-	}
-	function rotate(id) {
-    div = getElementById['id'];
-    div.style.animation-play-state = running;
-	}
-	</script>
-	-->
 </body>
 </html>
