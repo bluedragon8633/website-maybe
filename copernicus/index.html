@@ -27,13 +27,15 @@
 		
         h1 {
 			color: red;
+			animation: blinkingCol3 3s infinite;
 		}
         h2 {
 			color: #0000ff;
 		}
         
 		p {
-			color:#990099;
+			color:#00ffff;
+			animation: blinkingCol2 2s infinite;
 		}
         .Footnote {
             font-size:12px;
@@ -73,6 +75,16 @@
 			0%		{ background-color: #00ffff;}
 			50%	    { background-color: #ff00ff;}
 			100%    { background-color: #00ffff;}
+		}
+		@keyframes blinkingCol2{
+			0%		{ color: #ff00ff;}
+			50%	    { color: #00ffff;}
+			100%    { color: #ff00ff;}
+		}
+		@keyframes blinkingCol3{
+			0%		{ color: #ff3ac6;}
+			50%	    { color: #5fa41c;}
+			100%    { color: #ff3ac6;}
 		}
 		<!--
 		@keyframes rotate
