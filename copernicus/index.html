@@ -13,8 +13,14 @@
             border: 2px solid black;
             width:60%;
             margin-left:20%;
+			margin-bottom:20px;
+			margin-top:20px;
         }
         
+		.UpsideDown {
+			transform: rotate(180deg) scaleX(-1);
+		}
+		
         h1 {
 			color: red;
 		}
@@ -23,7 +29,7 @@
 		}
         
 		p {
-			color:#000000;
+			color:#990099;
 		}
         .Footnote {
             font-size:12px;
@@ -43,6 +49,24 @@
 			50%	    { background-color: #ffff00;}
 			100%    { background-color: #00ff00;}
 		}
+		
+		@keyframes rotate
+		{
+			0%   { transform: rotate(0); }
+			25%  { transform: rotate(90); }
+			50%  { transform: rotate(180); }
+			75%  { transform: rotate(270); }
+			100% { transform: rotate(360); }
+		}
+		
+		#spin
+		{
+			animation-name: rotate;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-play-state: running;
+		}
+
     </style>
 </head>
 
@@ -50,7 +74,33 @@
 
     <div class="blink-bg">
     <div class="Center">
-        <h1>Learn About Copernicus</h1>
+        <h1>Learn About Copernicus!</h1>
+        <p class="Footnote">Made by bluedragon8633</p>
+        
+        <div class="Section">
+            <h2>Do YOU want to learn all the intimate details about a dead person?</h2>
+            <p>Your one-stop shop to post-mortem stalking!</p>
+            <p><a href="./GexQuoteGenerator - Release.zip">Windows build (x64)</a></p>
+        </div>
+        
+    </div>
+    <div class="Center UpsideDown">
+        <h1>Learn About Copernicus!</h1>
+        <p class="Footnote">Made by bluedragon8633</p>
+        
+        <div class="Section">
+            <h2>Do YOU want to learn all the intimate details about a dead person?</h2>
+            <p>Your one-stop shop to post-mortem stalking!</p>
+            <p><a href="./GexQuoteGenerator - Release.zip">Windows build (x64)</a></p>
+        </div>
+        
+    </div>
+	<!--
+	<div class="Center">
+		<button onclick="rotate("rotating_div")">Spin!</button>
+	</div>
+    <div class="Center" id="spin">
+        <h1>Learn About Copernicus!</h1>
         <p class="Footnote">Made by bluedragon8633</p>
         
         <div class="Section">
@@ -63,9 +113,27 @@
 	</div>
 	
 	<script>
-	document.getElementById("dadbod").style.background-color = "00ff00";
-	
-	document.getElementById("dadbod").style.background-color = "ffff00";
+	var degrees = 0;
+	var returnThis = "";
+	var times = 0;
+	function spin() {
+	while(times < 5;) {
+		
+		if (degrees==359) {
+			degrees = 0;
+			times++;
+		} else {
+			degrees++;
+		}
+		returnThis = degrees.concat("deg");
+		document.getElementById("spin").style.rotate = degrees;
+	}
+	}
+	function rotate(id) {
+    div = getElementById['id'];
+    div.style.animation-play-state = running;
+	}
 	</script>
+	-->
 </body>
 </html>
