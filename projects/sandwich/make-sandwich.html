@@ -7,8 +7,8 @@
 <body>
 	<p><a href="./tutorial.html">Confused? Fuck you!</a></p>
 	<p><a href="./index.html">Home</a></p>
-	<button onclick="makeSandwich(0)" id="goodSammichButton">Good Sammich</button>
-	<button onclick="makeSandwich(1)" id="badSammichButton">Bad Sammich</button>
+	<button onclick="makeGoodSandwich()" id="goodSammichButton">Good Sammich</button>
+	<button onclick="makeShitSandwich()" id="badSammichButton">Bad Sammich</button>
 	<p id="SammichIndicator">You haven't made a sandwich yet. </p>
     <script>
         const cheese = {"americano","azul","suzio","mozzarella","cabra","cheddar","brie","feta","cabaña","povalone","ahumado"};
@@ -20,12 +20,11 @@
 	    
 	    
 	    
-	function makeSandwich(quality) {
-		if (quality==0) {
-			document.getElementById("SammichIndicator").innerHTML = "Halfway decent sandwich.";
-		} else {
-			document.getElementById("SammichIndicator").innerHTML = "This sandwich is absolute shit.";
-		}
+	function makeGoodSandwich() {
+		document.getElementById("SammichIndicator").innerHTML = "Halfway decent sandwich.";
+	}
+	function makeShitSandwich() {
+		document.getElementById("SammichIndicator").innerHTML = "This sandwich has dog fur as an ingredient. How do you think it'll turn out?";
 	}
     </script>
 </body>
