@@ -35,7 +35,16 @@
 	    
 	    
 	    function makeGoodSandwich() {
-	    	document.getElementById("SammichIndicator").innerHTML = "Halfway decent sandwich. It has bread type: " + breads[Math.floor(Math.random() * breads.length)];
+			let numberOfMeats = Math.floor(Math.random() * 3);
+			lastMeats = getMeats(numberOfMeats);
+			let returnString = "";
+			returnString = returnString + "Halfway decent sandwich. It has bread type: " + breads[Math.floor(Math.random() * breads.length)] + ".";
+			returnString = returnString + " It has " + numberOfMeats + " types of meat; ";
+			for (let i=0;i<numberOfMeats - 1;i++) {
+				returnString = returnString + meats[lastMeats[i]] + ", ";
+			}
+			returnString = returnString + "and " + meats[lastMeats[numberOfMeats - 1]] + ".";
+	    	document.getElementById("SammichIndicator").innerHTML = returnString;
 	    }
         function makeShitSandwich() {
 	    	document.getElementById("SammichIndicator").innerHTML = "This sandwich has " + animals[Math.floor(Math.random() * animals.length)].toUpperCase() + " FUR as an ingredient. How do you think it'll turn out?";
