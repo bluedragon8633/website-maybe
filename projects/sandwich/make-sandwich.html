@@ -18,7 +18,7 @@
 	<img id="meat2" src="">
     <script>
         const cheese = ["americano","azul","suzio","mozzarella","cabra","cheddar","brie","feta","cabaña","povalone","ahumado"];
-        const vegetales = ["pepino","zanahoria","lechuga","champinone","pimiento","patata","cebolla","cebolla","aguacate","tomate","col"];
+        const vegetables = ["pepino","zanahoria","lechuga","champinone","pimiento","patata","cebolla","cebolla","aguacate","tomate","col"];
         const breads = ["brioche","focaccia","blanco","focaccia","tortilla"];
         const meats = ["carne de res","pescado","cabra","pollo","pavo","alitas de pollo","salmon","atun","chorizo","ternera","cangrejo"];
 		const condiments = ["sal","pimienta","mayonesa","mantequilla", "ajo","vinagre","salsa picante","aceite de oliva"];
@@ -54,11 +54,23 @@
 	        }
 	        return meatIds;
 	    }
+
+	    function getVeggies(howMany) {
+	        let vegIds = [];
+	        for (let i=0;i<howMany;i++) {
+	            vegetables.push(Math.floor(Math.random() * vegetables.length));
+	        }
+	        return vegIds;
+	    }
 	    
 	    
 	    function makeGoodSandwich() {
+	        //NOTE: Math.random() * x returns a value 0 - (x-1); that is, excluding x.
 			let numberOfMeats = Math.floor(Math.random() * 3);
+			isBreadToasted = (Math.random() < 0.5);
+			let numberOfVeggies = Math.floor(Math.random() * 4);
 			lastMeats = getMeats(numberOfMeats);
+			lastVeggies = getVeggies(numberOfVeggies);
 			let returnString = "";
 			
 			
@@ -76,7 +88,7 @@
 			} else {
 			    returnString += " This sandwich is vegetarian, and has no meat.";
 			}
-	    	
+	    	returnString += " This sammich also has " + numberOfVeggies + " different vegetables;";
 	    	
 	    	document.getElementById("SammichIndicator").innerHTML = returnString;
 	    	setPictures();
