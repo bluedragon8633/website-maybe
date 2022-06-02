@@ -38,12 +38,24 @@
 			let numberOfMeats = Math.floor(Math.random() * 3);
 			lastMeats = getMeats(numberOfMeats);
 			let returnString = "";
+			
+			
 			returnString = returnString + "Halfway decent sandwich. It has bread type: " + breads[Math.floor(Math.random() * breads.length)] + ".";
 			returnString = returnString + " It has " + numberOfMeats + " types of meat; ";
-			for (let i=0;i<numberOfMeats - 1;i++) {
+			if (numberOfMeats > 0) {
+			    for (let i=0;i<numberOfMeats - 1;i++) {
 				returnString = returnString + meats[lastMeats[i]] + ", ";
+			    }
+			    if (numberOfMeats > 1) {
+			        returnString += "and " + meats[lastMeats[numberOfMeats - 1]] + ".";
+			    } else {
+			        returnString += " " + meats[lastMeats[numberOfMeats - 1]] + ".";
+			    }
+			} else {
+			    returnString += " This sandwich is vegetarian, and has no meat.";
 			}
-			returnString = returnString + "and " + meats[lastMeats[numberOfMeats - 1]] + ".";
+	    	
+	    	
 	    	document.getElementById("SammichIndicator").innerHTML = returnString;
 	    }
         function makeShitSandwich() {
