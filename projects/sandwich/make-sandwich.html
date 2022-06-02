@@ -11,11 +11,12 @@
 	<button id="badSammichButton" onclick="makeShitSandwich()">Bad Sammich</button>
 	<p id="SammichIndicator">You haven't made a sandwich yet. </p>
 	<img id="breadImg" src="">
-	<img id="veggie1" src="">
-	<img id="veggie2" src="">
-	<img id="veggie3" src="">
-	<img id="meat1" src="">
-	<img id="meat2" src="">
+	<img id="veggie1Img" src="">
+	<img id="veggie2Img" src="">
+	<img id="veggie3Img" src="">
+	<img id="meat1Img" src="">
+	<img id="meat2Img" src="">
+	<img id="cheeseImg" src="">
     <script>
         const cheese = ["americano","azul","suzio","mozzarella","cabra","cheddar","brie","feta","cabaña","povalone","ahumado"];
         const vegetables = ["pepino","zanahoria","lechuga","champinone","pimiento","patata","cebolla","cebolla","aguacate","tomate","col"];
@@ -23,12 +24,14 @@
         const meats = ["carne de res","pescado","cabra","pollo","pavo","alitas de pollo","salmon","atun","chorizo","ternera","cangrejo"];
 		const condiments = ["sal","pimienta","mayonesa","mantequilla", "ajo","vinagre","salsa picante","aceite de oliva"];
 		const animals = ["dog","cat","hippo","gorilla","horse","cow","your mom's","goat","rat","skunk","badger","kangaroo"];
+		const shittyIngredients = ["",""];
 		
 		const cheesePic = "https://iheartcraftythings.com/wp-content/uploads/2022/01/6-65.jpg";
 		const fishPic = "https://w7.pngwing.com/pngs/7/786/png-transparent-salmon-free-content-fish-gold-medal-leaf-computer-wallpaper-cartoon.png";
 		const breadPic = "https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX5232429.jpg";
 		const toastPic = "https://s3-eu-central-1.amazonaws.com/cartoons-s3/styles/product_detail_image/s3/cartoons/2019/12/toast__glen_le_lievre.jpg?itok=a2tnMRER";
 		const veggiePics = [];
+		const meatPics = [];
 		
 		var lastSammichType = "none";
 	    var lastbreadType = -1;
@@ -43,6 +46,12 @@
 				document.getElementById("breadImg").src = toastPic;
 			} else {
 				document.getElementById("breadImg").src = breadPic;
+			}
+			if (lastMeats.length > 0) {
+			    document.getElementById("meat1Img").src = meatPics[lastMeats[0]];
+			    if (lastMeats.length > 1) {
+			        document.getElementById("meat2Img").src = meatPics[lastMeats[1]];
+			    }
 			}
 			
 		}
