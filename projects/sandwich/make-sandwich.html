@@ -19,19 +19,26 @@
 	<img id="cheeseImg" src="">
     <script>
         const cheese = ["americano","azul","suzio","mozzarella","cabra","cheddar","brie","feta","cabaña","povalone","ahumado"];
-        const vegetables = ["pepino","zanahoria","lechuga","champinone","pimiento","patata","cebolla","cebolla","aguacate","tomate","col"];
+        const vegetables = ["pepino","zanahoria"];//"lechuga","champinone","pimiento","patata","cebolla","cebolla","aguacate","tomate"];
         const breads = ["brioche","focaccia","blanco","focaccia","tortilla"];
         const meats = ["carne de res","pescado","cabra","pollo","pavo","alitas de pollo","salmon","atun","chorizo","ternera","cangrejo"];
 		const condiments = ["sal","pimienta","mayonesa","mantequilla", "ajo","vinagre","salsa picante","aceite de oliva"];
 		const animals = ["dog","cat","hippo","gorilla","horse","cow","your mom's","goat","rat","skunk","badger","kangaroo"];
-		const shittyIngredients = ["",""];
+		const shittyIngredients = ["dedos de tu nino primero",""];
 		
 		const cheesePic = "https://iheartcraftythings.com/wp-content/uploads/2022/01/6-65.jpg";
 		const fishPic = "https://w7.pngwing.com/pngs/7/786/png-transparent-salmon-free-content-fish-gold-medal-leaf-computer-wallpaper-cartoon.png";
 		const breadPic = "https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX5232429.jpg";
 		const toastPic = "https://s3-eu-central-1.amazonaws.com/cartoons-s3/styles/product_detail_image/s3/cartoons/2019/12/toast__glen_le_lievre.jpg?itok=a2tnMRER";
-		const veggiePics = [];
-		const meatPics = [];
+		const cucumberPic = "https://charatoon.com/photo/3969.png";
+		const carrotPic = "https://cdn.dribbble.com/users/3526211/screenshots/14861201/media/5b688aa536bf9a955187c7eaf1f62b78.jpg";
+		const lettucePic = "https://cdn1.vectorstock.com/i/1000x1000/24/05/cartoon-lettuce-character-vector-392405.jpg";
+		
+		
+		
+		
+		const veggiePics = [cucumberPic,carrotPic,lettucePic];//"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh2xb-fJUKr0A3d49py-7Ka6UJWWT9hAimkxNmfuSiGNHJM8dZrIVoqFZE2Y3mxHk3cyo:https://cdn1.vectorstock.com/i/1000x1000/96/55/cartoon-mushroom-vector-969655.jpg&usqp=CAU","https://img1.cgtrader.com/items/2691042/21682e7e4c/large/chili-pepper-cartoon-3d-model-max-obj-fbx-ma-blend.jpg","https://p.turbosquid.com/ts-thumb/8D/Lpmp09/t1j6D9P2/1r/jpg/1591265752/600x600/fit_q87/84c422aab6eb39a2c51b489ce6c6db0c43d1c193/1r.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwMcWhj39ggvyn87qPVpFhRrOfYaBM5Q63-53X5NX4QclQXSXne8-yOWrBkvhihttorJQ:https://i.ytimg.com/vi/KcTwWv1jOcw/maxresdefault.jpg&usqp=CAU","https://cdn.dribbble.com/users/91923/screenshots/15356108/media/96e4b33c699325f533402f87f9bb0d7f.jpg?compress=1&resize=400x300","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXhXTp_TMrn23cn9HIW3ABNfK49vdg8Gs5GA:pm1.narvii.com/7636/55f2993b0cebb46f39648751643a7b1d484a2ed7r1-502-593v2_uhq.jpg&usqp=CAU"];
+		const meatPics = ["",fishPic,"","","","",fishPic,fishPic];
 		
 		var lastSammichType = "none";
 	    var lastbreadType = -1;
@@ -51,6 +58,15 @@
 			    document.getElementById("meat1Img").src = meatPics[lastMeats[0]];
 			    if (lastMeats.length > 1) {
 			        document.getElementById("meat2Img").src = meatPics[lastMeats[1]];
+			    }
+			}
+			if (lastVeggies.length > 0) {
+			    document.getElementById("veggie1Img").src = veggiePics[lastVeggies[0]];
+			    if (lastVeggies.length > 1) {
+			        document.getElementById("veggie2Img").src = veggiePics[lastVeggies[1]];
+			        if (lastVeggies.length > 2) {
+			            document.getElementById("veggie3Img").src = veggiePics[lastVeggies[2]];
+			        }
 			    }
 			}
 			
@@ -77,8 +93,8 @@
 	        //NOTE: Math.random() * x returns a value 0 - (x-1); that is, excluding x.
 			let numberOfMeats = Math.floor(Math.random() * 3);
 			isBreadToasted = (Math.random() < 0.5);
-			let numberOfVeggies = Math.floor(Math.random() * 4);
-			lastMeats = getMeats(numberOfMeats);
+			let numberOfVeggies = 5;//Math.floor(Math.random() * 4);
+			//lastMeats = getMeats(numberOfMeats);
 			lastVeggies = getVeggies(numberOfVeggies);
 			let returnString = "";
 			
