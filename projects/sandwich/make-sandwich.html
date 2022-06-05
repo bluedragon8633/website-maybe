@@ -49,6 +49,7 @@
 	    var lastCondiments = [];
 	    
 		function setPictures() {
+		    document.getElementById("cheeseImg").src = cheesePic;
 			if (isBreadToasted) {
 				document.getElementById("breadImg").src = toastPic;
 			} else {
@@ -83,7 +84,7 @@
 	    function getVeggies(howMany) {
 	        let vegIds = [];
 	        for (let i=0;i<howMany;i++) {
-	            vegetables.push(Math.floor(Math.random() * vegetables.length));
+	            vegIds.push(Math.floor(Math.random() * vegetables.length));
 	        }
 	        return vegIds;
 	    }
