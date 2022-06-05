@@ -26,3 +26,8 @@ a {
 img {
     max-width:300px;    
 }
+
+.CenteredBody {
+    margin-left:25%;
+    margin-top:20px;
+}
