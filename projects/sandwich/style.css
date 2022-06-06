@@ -28,6 +28,11 @@ img {
 }
 
 .CenteredBody {
-    margin-left:25%;
+    margin-left:5%;
     margin-top:20px;
 }
+
+#logo {
+    max-width:200px;    
+}
+
