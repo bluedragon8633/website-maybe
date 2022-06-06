@@ -77,7 +77,7 @@
 		const veggiePics = [cucumberPic,carrotPic,lettucePic,"https://cdn1.vectorstock.com/i/1000x1000/96/55/cartoon-mushroom-vector-969655.jpg","https://img1.cgtrader.com/items/2691042/21682e7e4c/large/chili-pepper-cartoon-3d-model-max-obj-fbx-ma-blend.jpg","https://p.turbosquid.com/ts-thumb/8D/Lpmp09/t1j6D9P2/1r/jpg/1591265752/600x600/fit_q87/84c422aab6eb39a2c51b489ce6c6db0c43d1c193/1r.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwMcWhj39ggvyn87qPVpFhRrOfYaBM5Q63-53X5NX4QclQXSXne8-yOWrBkvhihttorJQ:https://i.ytimg.com/vi/KcTwWv1jOcw/maxresdefault.jpg&usqp=CAU","https://cdn.dribbble.com/users/91923/screenshots/15356108/media/96e4b33c699325f533402f87f9bb0d7f.jpg?compress=1&resize=400x300","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXhXTp_TMrn23cn9HIW3ABNfK49vdg8Gs5GA:pm1.narvii.com/7636/55f2993b0cebb46f39648751643a7b1d484a2ed7r1-502-593v2_uhq.jpg&usqp=CAU"];
 		const meatPics = ["",fishPic,"","","","",fishPic,fishPic,"","",crabPic,lobsterPic];
 		
-		var egg = false;
+		var egg = true;
 		var lastSammichType = "none";
 	    var lastbreadType = -1;
 		var isBreadToasted = false;
@@ -167,7 +167,7 @@
 			//lastMeats = getMeats(numberOfMeats);
 			lastVeggies = getVeggies(numberOfVeggies);
 			let returnString = "";
-			egg = (Math.random() < 0.4);
+			//egg = (Math.random() < 0.4);
 			
 			returnString = returnString + "Halfway decent sandwich. It has bread type: " + breads[Math.floor(Math.random() * breads.length)] + ".";
 			returnString = returnString + " It has " + numberOfMeats + " types of meat; ";
