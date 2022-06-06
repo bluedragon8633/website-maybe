@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+<div class="CenteredBody">
 	<p><a href="./tutorial.html">Confused? Fuck you!</a></p>
 	<p><a href="./index.html">Home</a></p>
 	<button id="goodSammichButton" onclick="makeGoodSandwich()">Good Sammich</button>
@@ -17,14 +18,50 @@
 	<img id="meat1Img" src="">
 	<img id="meat2Img" src="">
 	<img id="cheeseImg" src="">
+	<audio controls>
+		<source src="bread.mp3" type="audio/mpeg" id="breadAux">
+		Your browser does not support the audio element.
+	</audio>
+	<audio controls>
+		<source src="" type="audio/mpeg" id="cheeseAux">
+		Your browser does not support the audio element.
+	</audio>
+	<audio controls>
+		<source src="" type="audio/mpeg" id="veggie1Aux">
+		Your browser does not support the audio element.
+	</audio>
+	<audio controls>
+		<source src="" type="audio/mpeg" id="veggie2Aux">
+		Your browser does not support the audio element.
+	</audio>
+	<audio controls>
+		<source src="" type="audio/mpeg" id="veggie3Aux">
+		Your browser does not support the audio element.
+	</audio>
+	<audio controls>
+		<source src="" type="audio/mpeg" id="meat1Aux">
+		Your browser does not support the audio element.
+	</audio>
+	<audio controls>
+		<source src="" type="audio/mpeg" id="meat1Aux">
+		Your browser does not support the audio element.
+	</audio>
+	<audio controls>
+		<source src="" type="audio/mpeg" id="eggAux">
+		Your browser does not support the audio element.
+	</audio>
     <script>
         const cheese = ["americano","azul","suzio","mozzarella","cabra","cheddar","brie","feta","cabaña","povalone","ahumado"];
         const vegetables = ["pepino","zanahoria"];//"lechuga","champinone","pimiento","patata","cebolla","cebolla","aguacate","tomate"];
         const breads = ["brioche","focaccia","blanco","focaccia","tortilla"];
-        const meats = ["carne de res","pescado","cabra","pollo","pavo","alitas de pollo","salmon","atun","chorizo","ternera","cangrejo"];
+        const meats = ["carne de res","pescado","cabra","pollo","pavo","alitas de pollo","salmon","atun","chorizo","ternera","cangrejo","langosta"];
+		const isFish = [false,true,false,false,false,true,true,false,false,false,false];
+		const isCrab = [false,false,false,false,false,false,false,false,false,true,true];
+		
 		const condiments = ["sal","pimienta","mayonesa","mantequilla", "ajo","vinagre","salsa picante","aceite de oliva"];
 		const animals = ["dog","cat","hippo","gorilla","horse","cow","your mom's","goat","rat","skunk","badger","kangaroo"];
 		const shittyIngredients = ["dedos de tu nino primero",""];
+		
 		
 		const cheesePic = "https://iheartcraftythings.com/wp-content/uploads/2022/01/6-65.jpg";
 		const fishPic = "https://w7.pngwing.com/pngs/7/786/png-transparent-salmon-free-content-fish-gold-medal-leaf-computer-wallpaper-cartoon.png";
@@ -33,13 +70,14 @@
 		const cucumberPic = "https://charatoon.com/photo/3969.png";
 		const carrotPic = "https://cdn.dribbble.com/users/3526211/screenshots/14861201/media/5b688aa536bf9a955187c7eaf1f62b78.jpg";
 		const lettucePic = "https://cdn1.vectorstock.com/i/1000x1000/24/05/cartoon-lettuce-character-vector-392405.jpg";
+		const crabPic = "https://pbs.twimg.com/media/ES5Jvo_UEAA8u2p.jpg";
+		const lobsterPic = "http://clipart-library.com/images/8iAoqE6BT.jpg";
 		
 		
+		const veggiePics = [cucumberPic,carrotPic,lettucePic,"https://cdn1.vectorstock.com/i/1000x1000/96/55/cartoon-mushroom-vector-969655.jpg","https://img1.cgtrader.com/items/2691042/21682e7e4c/large/chili-pepper-cartoon-3d-model-max-obj-fbx-ma-blend.jpg","https://p.turbosquid.com/ts-thumb/8D/Lpmp09/t1j6D9P2/1r/jpg/1591265752/600x600/fit_q87/84c422aab6eb39a2c51b489ce6c6db0c43d1c193/1r.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwMcWhj39ggvyn87qPVpFhRrOfYaBM5Q63-53X5NX4QclQXSXne8-yOWrBkvhihttorJQ:https://i.ytimg.com/vi/KcTwWv1jOcw/maxresdefault.jpg&usqp=CAU","https://cdn.dribbble.com/users/91923/screenshots/15356108/media/96e4b33c699325f533402f87f9bb0d7f.jpg?compress=1&resize=400x300","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXhXTp_TMrn23cn9HIW3ABNfK49vdg8Gs5GA:pm1.narvii.com/7636/55f2993b0cebb46f39648751643a7b1d484a2ed7r1-502-593v2_uhq.jpg&usqp=CAU"];
+		const meatPics = ["",fishPic,"","","","",fishPic,fishPic,"","",crabPic,lobsterPic];
 		
-		
-		const veggiePics = [cucumberPic,carrotPic,lettucePic];//"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh2xb-fJUKr0A3d49py-7Ka6UJWWT9hAimkxNmfuSiGNHJM8dZrIVoqFZE2Y3mxHk3cyo:https://cdn1.vectorstock.com/i/1000x1000/96/55/cartoon-mushroom-vector-969655.jpg&usqp=CAU","https://img1.cgtrader.com/items/2691042/21682e7e4c/large/chili-pepper-cartoon-3d-model-max-obj-fbx-ma-blend.jpg","https://p.turbosquid.com/ts-thumb/8D/Lpmp09/t1j6D9P2/1r/jpg/1591265752/600x600/fit_q87/84c422aab6eb39a2c51b489ce6c6db0c43d1c193/1r.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwMcWhj39ggvyn87qPVpFhRrOfYaBM5Q63-53X5NX4QclQXSXne8-yOWrBkvhihttorJQ:https://i.ytimg.com/vi/KcTwWv1jOcw/maxresdefault.jpg&usqp=CAU","https://cdn.dribbble.com/users/91923/screenshots/15356108/media/96e4b33c699325f533402f87f9bb0d7f.jpg?compress=1&resize=400x300","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXhXTp_TMrn23cn9HIW3ABNfK49vdg8Gs5GA:pm1.narvii.com/7636/55f2993b0cebb46f39648751643a7b1d484a2ed7r1-502-593v2_uhq.jpg&usqp=CAU"];
-		const meatPics = ["",fishPic,"","","","",fishPic,fishPic];
-		
+		var egg = false;
 		var lastSammichType = "none";
 	    var lastbreadType = -1;
 		var isBreadToasted = false;
@@ -48,6 +86,34 @@
 	    var lastCheeseType = -1;
 	    var lastCondiments = [];
 	    
+		function setAudio() {
+			document.getElementById("cheeseAux").src = "cheese.mp3";
+			document.getElementById("breadAux").src = "bread.mp3";
+			if (lastMeats.length > 0) {
+				document.getElementById("meat1Aux").src = meats[0] + ".mp3";
+				if (lastMeats.length > 1) {
+					document.getElementById("meat2Aux").src = meats[1] + ".mp3";
+				}
+			}
+			if (lastVeggies.length > 0) {
+			    document.getElementById("veggie1Aux").src = lastVeggies[0] + ".mp3";
+			    if (lastVeggies.length > 1) {
+			        document.getElementById("veggie2Aux").src = lastVeggies[1] + ".mp3";
+			        if (lastVeggies.length > 2) {
+			            document.getElementById("veggie3Aux").src = lastVeggies[2] + ".mp3";
+			        }
+			    }
+			}
+			if (egg) {
+				let eggNum = Math.floor(Math.random() * 2) + 1;
+				document.getElementById("eggAux").src = "Egg" + eggNum + ".mp3";
+			} else {
+				document.getElementById("eggAux").src = "no-egg.mp3";
+			]
+			
+		}
+		
+		
 		function setPictures() {
 		    document.getElementById("cheeseImg").src = cheesePic;
 			if (isBreadToasted) {
@@ -70,8 +136,9 @@
 			        }
 			    }
 			}
-			
+			setAudio();
 		}
+		
 		
 	    function getMeats(howMany) {
 	        let meatIds = [];
@@ -94,11 +161,11 @@
 	        //NOTE: Math.random() * x returns a value 0 - (x-1); that is, excluding x.
 			let numberOfMeats = Math.floor(Math.random() * 3);
 			isBreadToasted = (Math.random() < 0.5);
-			let numberOfVeggies = 5;//Math.floor(Math.random() * 4);
+			let numberOfVeggies = 3//Math.floor(Math.random() * 4);
 			//lastMeats = getMeats(numberOfMeats);
 			lastVeggies = getVeggies(numberOfVeggies);
 			let returnString = "";
-			
+			egg = (Math.random() < 0.4);
 			
 			returnString = returnString + "Halfway decent sandwich. It has bread type: " + breads[Math.floor(Math.random() * breads.length)] + ".";
 			returnString = returnString + " It has " + numberOfMeats + " types of meat; ";
@@ -124,5 +191,6 @@
             setPictures();
         }
     </script>
+</div>
 </body>
 </html>
