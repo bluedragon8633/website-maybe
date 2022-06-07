@@ -86,7 +86,10 @@
 	    
 		function setAudio() {
 			
-			document.getElementById("cheeseAux").src = "cheese.mp3";
+			let cheeseAudio = document.getElementById("cheeseAux");
+			cheeseAudio.src = "cheese.mp3";
+			cheeseAudio.load();
+			cheeseAudio.play();
 			document.getElementById("breadAux").src = "bread.mp3";
 			if (lastMeats.length > 0) {
 				document.getElementById("meat1Aux").src = meats[0] + ".mp3";
