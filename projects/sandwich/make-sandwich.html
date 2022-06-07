@@ -71,7 +71,8 @@
 			//cheeseAudio.play();
 			let eggAudio = document.getElementById("eggAux");
 			if (egg) {
-				eggAudio.src = "egg.mp3";
+				let eggNum = Math.floor(Math.random() * 2) + 1;
+				eggAudio.src = "Egg" + eggNum + ".mp3";
 			} else {
 				eggAudio.src = "no-egg.mp3";
 			}
