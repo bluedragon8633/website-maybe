@@ -11,44 +11,24 @@
 	<button id="goodSammichButton" onclick="makeGoodSandwich()">Good Sammich</button>
 	<button id="badSammichButton" onclick="makeShitSandwich()">Bad Sammich</button>
 	<p id="SammichIndicator">You haven't made a sandwich yet. </p>
-	<div>
-	<img id="breadImg" class="FoodImg" src="">
-	<img id="veggie1Img" class="FoodImg" src="">
-	<img id="veggie2Img" class="FoodImg" src="">
-	<img id="veggie3Img" class="FoodImg" src="">
-	<img id="meat1Img" class="FoodImg" src="">
-	<img id="meat2Img" class="FoodImg" src="">
-	<img id="cheeseImg" class="FoodImg" src="">
-	</div>
-	<audio controls>
-		<source src="bread.mp3" type="audio/mpeg" id="breadAux">
-		Your browser does not support the audio element.
-	</audio>
-	<audio controls src="" type="audio/mpeg" id="cheeseAux">
-		Your browser does not support the audio element.
-	</audio>
-	<audio controls>
-		<source src="" type="audio/mpeg" id="veggie1Aux">
-		Your browser does not support the audio element.
-	</audio>
-	<audio controls>
-		<source src="" type="audio/mpeg" id="veggie2Aux">
-		Your browser does not support the audio element.
-	</audio>
-	<audio controls>
-		<source src="" type="audio/mpeg" id="veggie3Aux">
-		Your browser does not support the audio element.
-	</audio>
-	<audio controls>
-		<source src="" type="audio/mpeg" id="meat1Aux">
-		Your browser does not support the audio element.
-	</audio>
-	<audio controls src="" type="audio/mpeg" id="meat1Aux">
-		Your browser does not support the audio element.
-	</audio>
-	<audio controls src="" type="audio/mpeg" id="eggAux">
-		Your browser does not support the audio element.
-	</audio>
+	<ul>
+		<li><img id="breadImg" class="FoodImg" src=""></li>
+		<li><audio controls src="" type="audio/mpeg" id="breadAux">Your browser does not support the audio element.</audio></li>
+		<li><img id="veggie1Img" class="FoodImg" src=""></li>
+		<li><audio controls src="" type="audio/mpeg" id="veggie1Aux">Your browser does not support the audio element.</audio></li>
+		<li><img id="veggie2Img" class="FoodImg" src=""></li>
+		<li><audio controls src="" type="audio/mpeg" id="veggie2Aux">Your browser does not support the audio element.</audio></li>
+		<li><img id="veggie3Img" class="FoodImg" src=""></li>
+		<li><audio controls src="" type="audio/mpeg" id="veggie3Aux">Your browser does not support the audio element.</audio></li>
+		<li><img id="meat1Img" class="FoodImg" src=""></li>
+		<li><audio controls src="" type="audio/mpeg" id="meat1Aux">Your browser does not support the audio element.</audio></li>
+		<li><img id="meat2Img" class="FoodImg" src=""></li>
+		<li><audio controls src="" type="audio/mpeg" id="meat2Aux">Your browser does not support the audio element.</audio></li>
+		<li><img id="cheeseImg" class="FoodImg" src=""></li>
+		<li><audio controls src="" type="audio/mpeg" id="cheeseAux">Your browser does not support the audio element.</audio></li>
+		<li><img id="eggImg" class="FoodImg" src=""></li>
+		<li><audio controls src="" type="audio/mpeg" id="eggAux">Your browser does not support the audio element.</audio></li>
+	</ul>
     <script>
         const cheese = ["azul","cheddar","brie","feta","ahumado"];
         const vegetables = ["pepino","zanahoria","lechuga","champinone","pimiento","patata","aguacate","tomate"];
@@ -59,7 +39,7 @@
 		const animals = ["dog","cat","hippo","gorilla","horse","cow","your mom's","goat","rat","skunk","badger","kangaroo"];
 		const shittyIngredients = ["dedos de tu nino primero",""];
 		
-		
+		const eggPic = "data:image/jpeg;base64,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";
 		const cheesePic = "https://iheartcraftythings.com/wp-content/uploads/2022/01/6-65.jpg";
 		const fishPic = "https://w7.pngwing.com/pngs/7/786/png-transparent-salmon-free-content-fish-gold-medal-leaf-computer-wallpaper-cartoon.png";
 		const breadPic = "https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX5232429.jpg";
@@ -89,27 +69,49 @@
 			cheeseAudio.src = "cheese.mp3";
 			cheeseAudio.load();
 			cheeseAudio.play();
-			document.getElementById("breadAux").src = "bread.mp3";
+			let eggAudio = document.getElementById("eggAux");
+			if (egg) {
+				eggAudio.src = "egg.mp3";
+			} else {
+				eggAudio.src = "no-egg.mp3";
+			}
+			eggAudio.load();
+			eggAudio.play();
+			let breadAudio = document.getElementById("breadAux");
+			breadAudio.src = "bread.mp3";
+			breadAudio.load();
+			breadAudio.play();
 			if (lastMeats.length > 0) {
-				document.getElementById("meat1Aux").src = meats[0] + ".mp3";
+				let meat1Audio = document.getElementById("meat1Aux");
+				meat1Audio.src = meats[0] + ".mp3";
+				meat1Audio.load();
+				meat1Audio.play();
 				if (lastMeats.length > 1) {
-					document.getElementById("meat2Aux").src = meats[1] + ".mp3";
+					let meat2Audio = document.getElementById("meat2Aux");
+					meat2Audio.src = meats[1] + ".mp3";
+					meat2Audio.load();
+					meat2Audio.play();
 				}
 			}
 			if (lastVeggies.length > 0) {
-			    document.getElementById("veggie1Aux").src = lastVeggies[0] + ".mp3";
+			    let veggieAudio = document.getElementById("veggie1Aux");
+				veggieAudio.src = lastVeggies[0] + ".mp3";
+				veggieAudio.load();
+				veggieAudio.play();
 			    if (lastVeggies.length > 1) {
-			        document.getElementById("veggie2Aux").src = lastVeggies[1] + ".mp3";
-			        if (lastVeggies.length > 2) {
-			            document.getElementById("veggie3Aux").src = lastVeggies[2] + ".mp3";
+					
+			        veggieAudio = document.getElementById("veggie2Aux");
+					veggieAudio.src = lastVeggies[1] + ".mp3";
+					veggieAudio.load();
+					veggieAudio.play();
+			        
+					if (lastVeggies.length > 2) {
+			            veggieAudio = document.getElementById("veggie3Aux");
+						veggieAudio.src = lastVeggies[2] + ".mp3";
+						veggieAudio.load();
+						veggieAudio.play();
 			        }
 			    }
-			}
-			if (egg) {
-				let eggNum = Math.floor(Math.random() * 2) + 1;
-				document.getElementById("eggAux").src = "Egg" + eggNum + ".mp3";
-			} else {
-				document.getElementById("eggAux").src = "no-egg.mp3";
 			}
 		}
 		
