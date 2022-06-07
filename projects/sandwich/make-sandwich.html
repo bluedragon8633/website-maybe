@@ -202,17 +202,7 @@
 	    	setPictures();
 	    }
         function makeShitSandwich() {
-	        //NOTE: Math.random() * x returns a value 0 - (x-1); that is, excluding x.
-			let numberOfMeats = 2;//Math.floor(Math.random() * 3);
-			isBreadToasted = (Math.random() < 0.5);
-			let numberOfVeggies = 3;//Math.floor(Math.random() * 4);
-			//lastMeats = getMeats(numberOfMeats);
-			lastVeggies = getVeggies(numberOfVeggies);
-			egg = (Math.random() < 0.5);
-			
-
-	    	document.getElementById("SammichIndicator").innerHTML = "";
-	    	setPictures();
+	        location.href = "./bad-sammich.html";
 			
         }
     </script>
