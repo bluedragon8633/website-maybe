@@ -28,6 +28,7 @@
 		<li><audio controls src="" type="audio/mpeg" id="cheeseAux">Your browser does not support the audio element.</audio></li>
 		<li><img id="eggImg" class="FoodImg" src=""></li>
 		<li><audio controls src="" type="audio/mpeg" id="eggAux">Your browser does not support the audio element.</audio></li>
+		<li><audio controls src="" type="audio/mpeg" id="saltAux">Your browser does not support the audio element.</audio></li>
 	</ul>
     <script>
         const cheese = ["azul","cheddar","brie","feta","ahumado"];
@@ -59,7 +60,7 @@
 		const veggiePics = [cucumberPic,carrotPic,lettucePic,pepperPic,potatoPic,avocadoPic,tomatoPic];
 		const meatPics = [cowPic,chickPic,chorizoPic,fishPic,crabPic];
 		
-			
+		var salt = false;	
 		var egg = true;
 		var lastSammichType = "none";
 	    var lastbreadType = -1;
@@ -81,6 +82,11 @@
 				eggAudio.src = "Egg" + eggNum + ".mp3";
 			} else {
 				eggAudio.src = "no-egg.mp3";
+			}
+			eggAudio.load();
+			if (salt) {
+				eggAudio = document.getElementById("saltAux");
+				eggAudio.src = "sal y pimienta.mp3";
 			}
 			eggAudio.load();
 			//eggAudio.play();
@@ -189,6 +195,7 @@
 			lastMeats = getMeats(numberOfMeats);
 			lastVeggies = getVeggies(numberOfVeggies);
 			egg = (Math.random() < 0.5);
+			salt = (Math.random() < 0.5);
 			
 
 	    	document.getElementById("SammichIndicator").innerHTML = "";
