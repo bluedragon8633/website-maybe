@@ -68,7 +68,7 @@
 			let cheeseAudio = document.getElementById("cheeseAux");
 			cheeseAudio.src = "cheese.mp3";
 			cheeseAudio.load();
-			cheeseAudio.play();
+			//cheeseAudio.play();
 			let eggAudio = document.getElementById("eggAux");
 			if (egg) {
 				eggAudio.src = "egg.mp3";
@@ -76,40 +76,40 @@
 				eggAudio.src = "no-egg.mp3";
 			}
 			eggAudio.load();
-			eggAudio.play();
+			//eggAudio.play();
 			let breadAudio = document.getElementById("breadAux");
 			breadAudio.src = "bread.mp3";
 			breadAudio.load();
-			breadAudio.play();
+			//breadAudio.play();
 			if (lastMeats.length > 0) {
 				let meat1Audio = document.getElementById("meat1Aux");
 				meat1Audio.src = meats[0] + ".mp3";
 				meat1Audio.load();
-				meat1Audio.play();
+				//meat1Audio.play();
 				if (lastMeats.length > 1) {
 					let meat2Audio = document.getElementById("meat2Aux");
 					meat2Audio.src = meats[1] + ".mp3";
 					meat2Audio.load();
-					meat2Audio.play();
+					//meat2Audio.play();
 				}
 			}
 			if (lastVeggies.length > 0) {
 			    let veggieAudio = document.getElementById("veggie1Aux");
 				veggieAudio.src = lastVeggies[0] + ".mp3";
 				veggieAudio.load();
-				veggieAudio.play();
+				//veggieAudio.play();
 			    if (lastVeggies.length > 1) {
 					
 			        veggieAudio = document.getElementById("veggie2Aux");
 					veggieAudio.src = lastVeggies[1] + ".mp3";
 					veggieAudio.load();
-					veggieAudio.play();
+					//veggieAudio.play();
 			        
 					if (lastVeggies.length > 2) {
 			            veggieAudio = document.getElementById("veggie3Aux");
 						veggieAudio.src = lastVeggies[2] + ".mp3";
 						veggieAudio.load();
-						veggieAudio.play();
+						//veggieAudio.play();
 			        }
 			    }
 			}
