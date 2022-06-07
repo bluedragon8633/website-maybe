@@ -59,7 +59,6 @@
 		const veggiePics = [cucumberPic,carrotPic,lettucePic,pepperPic,potatoPic,avocadoPic,tomatoPic];
 		const meatPics = [cowPic,chickPic,chorizoPic,fishPic,crabPic];
 		
-		document.getElementById("meat1Img").src = chickPic;
 			
 		var egg = true;
 		var lastSammichType = "none";
@@ -187,7 +186,7 @@
 			let numberOfMeats = Math.floor(Math.random() * 3);
 			isBreadToasted = (Math.random() < 0.5);
 			let numberOfVeggies = 3//Math.floor(Math.random() * 4);
-			//lastMeats = getMeats(numberOfMeats);
+			lastMeats = getMeats(numberOfMeats);
 			lastVeggies = getVeggies(numberOfVeggies);
 			egg = (Math.random() < 0.5);
 			
