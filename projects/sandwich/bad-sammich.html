@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bocadillo Malo | Bocadillos del Infierno</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<audio controls src="" id="badAudio"></audio>
+	<script>
+		let b = document.getElementById("badAudio");
+		let num = Math.floor(Math.random() * 3) + 1;
+		b.src = "bad sandwich " + num + ".mp3"
+	</script>
+</body>
+</html>
