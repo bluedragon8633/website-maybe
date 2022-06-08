@@ -23,7 +23,7 @@ a {
     color:#0000ff;
 }
 
-img {
+.FoodImg {
     max-height:100px;    
 }
 
@@ -33,6 +33,6 @@ img {
 }
 
 #logo {
-    max-width:200px;    
+    max-width:500px;    
 }
 
